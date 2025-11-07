@@ -3,7 +3,7 @@
       spaceBetween: 0,
       centeredSlides: true,
       loop: true,
-      speed: 500,
+      speed: 1000,
       autoplay: {
         delay: 4000,
         disableOnInteraction: true,
