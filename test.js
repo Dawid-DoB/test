@@ -5,7 +5,7 @@
       loop: true,
       speed: 1000,
       autoplay: {
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: true,
       },
       pagination: {
