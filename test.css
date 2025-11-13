@@ -1,36 +1,19 @@
-.logo-slider {
-  overflow: hidden; /* Ukrywa zawartość wystającą poza widok */
-  white-space: nowrap;
-  width: 100%;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+.form-field:focus + label,
+.form-field:not(:placeholder-shown) + label {
+  color: var(--color--primary);
+  font-size: var(--text--size-02);
+  padding-top: 0;
+  padding-bottom: 0;
+  top: -0.4375rem;
 }
-
-.logo-track {
-  display: flex;
-  white-space: nowrap;
-  /* Animacja: nazwa, czas, funkcja czasowa (linear dla jednostajności), nieskończoność */
-  animation: scroll 30s linear infinite;
-  width: max-content; /* Upewnia się, że track jest wystarczająco szeroki */
+:root {
+  --swiper-theme-color: var(--color--primary) !important;
+  --swiper-pagination-bullet-size: 0.5rem !important;
+  --swiper-pagination-bullet-horizontal-gap: 0.25rem !important;
+  --swiper-pagination-bullet-inactive-color: var(--color--gray-300) !important;
+  --swiper-pagination-bullet-inactive-opacity: 1 !important;
 }
-
-.logo-track:hover {
-  animation-play-state: paused; /* Opcjonalnie: zatrzymuje przewijanie po najechaniu myszą */
-}
-
-.logo-track img {
-  height: 80px; /* Dostosuj wysokość logotypów */
-  margin: 0 40px; /* Dodaj odstępy między logami */
-  flex-shrink: 0; /* Zapobiega zmniejszaniu obrazów */
-}
-
-/* Definicja animacji */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  /* Przesuń o 50% - czyli o szerokość pierwszego zestawu logotypów */
-  100% {
-    transform: translateX(-50%); 
-  }
+.swiper-pagination {
+  line-height: 100%;
+  font-size: var(--swiper-pagination-bullet-size);
 }
