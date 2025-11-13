@@ -1,0 +1,36 @@
+.logo-slider {
+  overflow: hidden; /* Ukrywa zawartość wystającą poza widok */
+  white-space: nowrap;
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-track {
+  display: flex;
+  white-space: nowrap;
+  /* Animacja: nazwa, czas, funkcja czasowa (linear dla jednostajności), nieskończoność */
+  animation: scroll 30s linear infinite;
+  width: max-content; /* Upewnia się, że track jest wystarczająco szeroki */
+}
+
+.logo-track:hover {
+  animation-play-state: paused; /* Opcjonalnie: zatrzymuje przewijanie po najechaniu myszą */
+}
+
+.logo-track img {
+  height: 80px; /* Dostosuj wysokość logotypów */
+  margin: 0 40px; /* Dodaj odstępy między logami */
+  flex-shrink: 0; /* Zapobiega zmniejszaniu obrazów */
+}
+
+/* Definicja animacji */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  /* Przesuń o 50% - czyli o szerokość pierwszego zestawu logotypów */
+  100% {
+    transform: translateX(-50%); 
+  }
+}
