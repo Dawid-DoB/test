@@ -1,4 +1,4 @@
-var swiper = new Swiper("#swiper", {
+var swiperTeam = new Swiper("#swiper-team", {
   slidesPerView: 5,
   spaceBetween: 0,
   centeredSlides: true,
