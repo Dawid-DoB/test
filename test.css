@@ -1,11 +1,3 @@
-.form-field:focus + label,
-.form-field:not(:placeholder-shown) + label {
-  color: var(--color--primary);
-  font-size: var(--text--size-02);
-  padding-top: 0;
-  padding-bottom: 0;
-  top: -0.4375rem;
-}
 :root {
   --swiper-theme-color: var(--color--primary) !important;
   --swiper-pagination-bullet-size: 0.5rem !important;
@@ -23,6 +15,66 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
+}
+
+/* Floating labels */
+
+.form-field:focus + label,
+.form-field:not(:placeholder-shown) + label {
+  color: var(--color--primary);
+  font-size: var(--text--size-02);
+  padding-top: 0;
+  padding-bottom: 0;
+  top: -0.4375rem;
+}
+
+/* Removes iOS form styling */
+
+input,
+textarea {
+  -webkit-appearance: none;
+  /* webkit */
+  -moz-appearance: none;
+  /* firefox */
+  appearance: none;
+  border-radius: 0;
+}
+
+/* Mobile tap color */
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbar but allow scrolling */
+
+html,
+body {
+  -ms-overflow-style: none;
+  /* Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Autocomplete styles */
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+/* Mobile menu scroll lock */
+
+.no-scroll {
+  overflow: hidden;
+  width: 100%;
+  touch-action: none;
 }
