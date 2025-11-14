@@ -14,6 +14,15 @@ var swiperTeam = new Swiper("#swiper-team", {
   },
 });
 
+// Teaxarea autoheight
+document.addEventListener('DOMContentLoaded', () => {
+  const textarea = document.getElementById("message");
+  textarea.addEventListener("input", () => {
+    textarea.style.height = "auto"; // reset to shrink if text deleted
+    textarea.style.height = textarea.scrollHeight + "px"; // grow to fit
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   /**
    * Animates a single counter element
