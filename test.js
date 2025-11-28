@@ -5,7 +5,7 @@ var swiperTeam = new Swiper("#swiper-team", {
   loop: true,
   speed: 1000,
   autoplay: {
-    delay: 3000,
+    delay: 3500,
     disableOnInteraction: true,
   },
   pagination: {
