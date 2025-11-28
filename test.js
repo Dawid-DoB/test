@@ -1,5 +1,5 @@
 var swiperTeam = new Swiper("#swiper-team", {
-  slidesPerView: 4,
+  slidesPerView: 2,
   spaceBetween: 0,
   centeredSlides: false,
   loop: true,
