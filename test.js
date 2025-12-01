@@ -1,12 +1,20 @@
 var swiperTeam = new Swiper("#swiper-team", {
-  slidesPerView: 2,
-  spaceBetween: 0,
+  slidesPerView: 1,
+  spaceBetween: 16,
   centeredSlides: false,
   loop: true,
+  autoHeight: true,
   speed: 1000,
   autoplay: {
     delay: 3500,
     disableOnInteraction: true,
+  },
+  breakpoints: {
+    992: {
+      autoHeight: false,
+      slidesPerView: 2,
+      spaceBetween: 32,
+    }
   },
   pagination: {
     el: ".swiper-pagination",
